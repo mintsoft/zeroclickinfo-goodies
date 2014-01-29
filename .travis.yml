@@ -7,8 +7,8 @@ before_install:
 install:
 #  - cpanm  -v --notest --skip-satisfied ExtUtils::ParseXS Text::Xslate
   - cpanm  --quiet  --notest --skip-satisfied Dist::Zilla
-  - "dzil authordeps | grep -vP '^\\[\\w+\\]' | xargs -n 1 cpanm  --quiet   --notest  --skip-satisfied"
-  - "dzil listdeps | grep -vP '^\\[\\w+\\]' | xargs -n 1 cpanm  --quiet   --notest  --skip-satisfied"
+  - "dzil authordeps | grep -vP '^\\[\\w+\\]' | xargs -n 1 cpanm   --notest  --skip-satisfied"
+  - "dzil listdeps | grep -vP '^\\[\\w+\\]' | xargs -n 1 cpanm   --notest  --skip-satisfied"
   - cpanm  --quiet   --notest  App::DuckPAN
   - duckpan DDG
 language: perl
